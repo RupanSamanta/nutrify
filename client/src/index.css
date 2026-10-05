@@ -19,8 +19,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Google Sans', Roboto, sans-serif;
-  --heading: system-ui, 'Google Sans', Roboto, sans-serif;
+  --sans: 'Google Sans', Roboto, sans-serif;
+  --heading: 'Google Sans', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -34,7 +34,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   --background: oklch(1 0 0);
@@ -118,13 +118,16 @@
   }
 }
 
+html,
 body {
   margin: 0;
+  height: 100%;
 }
 
 #root {
   width: 1126px;
   max-width: 100%;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
   min-height: 100svh;
@@ -210,8 +213,33 @@ body {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;}
+    @apply border-border outline-ring/50;
+  }
+
   body {
-    @apply bg-background text-foreground;}
+    @apply bg-background text-foreground;
+  }
+
   html {
-    @apply font-sans;}}
+    @apply font-sans;
+  }
+}
+
+.circular-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #9ac44d;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s ease;
+}
