@@ -233,13 +233,10 @@ body {
 .circle-bg {
   fill: none;
   stroke: #eee;
-  stroke-width: 3;
 }
 
 .circle-progress {
   fill: none;
-  stroke: #9ac44d;
-  stroke-width: 3;
   stroke-linecap: round;
   transition: stroke-dasharray 0.6s ease;
 }
