@@ -9,11 +9,11 @@ const NutrientStats = () => {
     }, {
       name: 'Protein',
       target: 120,
-      consumed: 20
+      consumed: 0
     }, {
       name: 'Fat',
       target: 128,
-      consumed: 9
+      consumed: 0
     }, 
   ];  
   const strokeColor = [

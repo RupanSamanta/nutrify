@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import CalorieStats from "./CalorieStats"
+import DateSelector from "./DateSelector";
 import NutrientStats from "./NutrientStats";
 
 const Home = () => {
@@ -14,11 +14,7 @@ const Home = () => {
   return (
     <div className="home-dashboard bg-[#9ac44d] p-4">
       <div className="nutrient-dashboard w-full bg-white px-3 py-5 rounded-md">
-        <div className="date-changer flex justify-between text-lg">
-          <button><ChevronLeft /></button>
-          <span className="font-semibold">Today, Oct 3</span>
-          <button disabled><ChevronRight /></button>
-        </div>
+        <DateSelector />
         <CalorieStats data={data} />
         <NutrientStats />
       </div>
