@@ -20,8 +20,8 @@ const NutrientStats = () => {
     '#f00', '#f90', '#765341'
   ]
   return (
-    <div className="nutrient-stats m-5">
-      <div className="flex items-center gap-2 mb-5 text-gray-400">
+    <div className="nutrient-stats mt-5">
+      <div className="flex items-center gap-2 mb-5 px-4 text-gray-400">
         <span>Eaten</span>
         <div className="w-full h-px bg-gray-200"></div>
       </div>

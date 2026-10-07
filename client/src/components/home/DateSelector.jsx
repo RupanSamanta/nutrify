@@ -16,7 +16,7 @@ const DateSelector = () => {
         <div className="date-changer flex justify-between items-center text-lg px-2 [&>button]:outline-none [&>button]:border-none [&>button]:disabled:opacity-30">
             <Button size="icon" variant="outline" onClick={decrementDate}><ChevronLeft /></Button>
             <Popover open={open} onOpenChange={setOpen}>
-                <PopoverTrigger render={<Button variant="outline" className="font-bold text-md">{date.toDateString()}</Button>} />
+                <PopoverTrigger render={<Button variant="outline" className="font-medium text-md">{date.toDateString()}</Button>} />
                 <PopoverContent className="ring-gray-100">
                     <Calendar mode="single" selected={date} disabled={(date) => date > new Date()}
                         onSelect={(date) => { setDate(date); setOpen(false); }} 
