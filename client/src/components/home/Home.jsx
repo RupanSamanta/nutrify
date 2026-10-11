@@ -1,8 +1,12 @@
-import { Heart, Menu } from "lucide-react";
+import { Heart, Menu } from "lucide-react"
 import CalorieStats from "./CalorieStats"
-import DateSelector from "./DateSelector";
-import NutrientStats from "./NutrientStatsCard";
-import MealStatsCard from "./MealStatsCard";
+import DateSelector from "./DateSelector"
+import NutrientStats from "./NutrientStatsCard"
+import MealStatsCard from "./MealStatsCard"
+
+import Sandiwich from "@/assets/icons/sandwich.svg"
+import Dinner from "@/assets/icons/dinner.svg"
+import Rice from "@/assets/icons/rice.svg"
 
 const Home = () => {
 
@@ -16,15 +20,18 @@ const Home = () => {
   const mealData = {
     breakfast: {
       totalCalorie: 768,
-      calorieEaten: 0
+      calorieEaten: 0,
+      icon: Sandiwich
     },
     lunch: {
       totalCalorie: 768,
-      calorieEaten: 768
+      calorieEaten: 768,
+      icon: Rice
     },
     dinner: {
-      totalCalorie: 768,
-      calorieEaten: 20
+      totalCalorie: 200,
+      calorieEaten: 42,
+      icon: Dinner
     }
   }
 
@@ -40,7 +47,7 @@ const Home = () => {
         <CalorieStats data={data} />
         <NutrientStats />
       </div>
-      <div className="meal-dashboard grid grid-cols-1 gap-5">
+      <div className="meal-dashboard grid grid-cols-1 gap-6">
         {Object.entries(mealData).map(([key, data]) => {
             return <MealStatsCard key={key} data={{...data, title: key}} />
         })}
