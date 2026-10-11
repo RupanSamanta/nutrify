@@ -1,4 +1,4 @@
-import { CheckCircle2, Hamburger, Plus } from "lucide-react"
+import { CheckCircle2, ChevronRight, Hamburger } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const MealStatsCard = ({ data }) => {
@@ -17,7 +17,7 @@ const MealStatsCard = ({ data }) => {
                     <div className="text-gray-500">{data.calorieEaten} / {data.totalCalorie} kcal</div>
                 </div>
             </div>
-            <Button variant="outline" size="icon" disabled className="rounded-full"><Plus /></Button>
+            <Button variant="outline" size="icon" disabled className="rounded-full outline-none border-none"><ChevronRight strokeWidth={2} className="size-7!" /></Button>
         </div>
     );
 }

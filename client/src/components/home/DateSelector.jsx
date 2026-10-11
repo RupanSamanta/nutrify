@@ -14,7 +14,7 @@ const DateSelector = () => {
     const decrementDate = () => { setDate(new Date(date.setDate(date.getDate() - 1))); };
     return (
         <div className="date-changer flex justify-between items-center text-lg px-2 [&>button]:outline-none [&>button]:border-none [&>button]:disabled:opacity-30">
-            <Button size="icon" variant="outline" onClick={decrementDate}><ChevronLeft /></Button>
+            <Button size="icon" variant="outline" onClick={decrementDate}><ChevronLeft className="size-5!"/></Button>
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger render={<Button variant="outline" className="font-medium text-md">{date.toDateString()}</Button>} />
                 <PopoverContent className="ring-gray-100">
@@ -24,7 +24,7 @@ const DateSelector = () => {
                         captionLayout="dropdown" />
                 </PopoverContent>
             </Popover>
-            <Button size="icon" variant="outline" onClick={incrementDate} disabled={date.toLocaleDateString() >= new Date().toLocaleDateString()}><ChevronRight /></Button>
+            <Button size="icon" variant="outline" onClick={incrementDate} disabled={date.toLocaleDateString() >= new Date().toLocaleDateString()}><ChevronRight className="size-5!" /></Button>
         </div>
     )
 }
